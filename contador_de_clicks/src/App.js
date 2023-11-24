@@ -1,14 +1,18 @@
 import './App.css';
+import Contador from './componentes/Contador';
 import Boton from './componentes/boton';
 import logo from './imagenes/contador.png';
+import { useState } from 'react'; //con esto puedo comenzar a trabajar con estados.
 
 function App() {
 
+  const [numClicks, setNumClicks] = useState(0);
+
   const manejarClick = ()=>{
-    console.log('Click');
+    setNumClicks(numClicks + 1);
   }
   const reiniciarContador=()=>{
-    console.log('reiniciar');
+    setNumClicks(0);
   }
 
   return (
@@ -20,6 +24,7 @@ function App() {
         alt='Logo principal'/>
       </div>
       <div className='contenedor-principal'>
+        <Contador numClicks={numClicks}/>
         <Boton
         texto='Click'
         esBotonDeClick={true}
