@@ -1,2 +1,2 @@
 # contadorDeClicks
-Segundo proyecto con React.
+Primer proyecto completo con React.
